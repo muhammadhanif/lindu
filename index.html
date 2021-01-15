@@ -55,21 +55,12 @@
     <!-- preload style #start -->
     <link rel="preload" as="style" href="assets/adminLTE/css/adminlte.min.css" />
     <link rel="preload" as="style" href="assets/fontawesome-free/css/all.min.css" />
-    <link rel="preload" as="style" href="assets/leaflet/leaflet.css" />
-    <link rel="preload" as="style" href="assets/leaflet/control-locate/L.Control.Locate.min.css" />
-    <link rel="preload" as="style" href="assets/leaflet/control-fullscreen/Control.FullScreen.css" />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" />
     <!-- preload style #end -->
 
     <!-- preload script #start -->
     <link rel="preload" as="script" href="assets/jquery/jquery.min.js" />
-    <link rel="preload" as="script" href="assets/adminLTE/js/adminlte.min.js" />
-    <link rel="preload" as="script" href="assets/leaflet/leaflet.js" />
-    <link rel="preload" as="script" href="assets/leaflet/spin/spin.js" />
-    <link rel="preload" as="script" href="assets/leaflet/spin/leaflet.spin.min.js" />
-    <link rel="preload" as="script" href="assets/leaflet/control-locate/L.Control.Locate.js" />
-    <link rel="preload" as="script" href="assets/leaflet/control-fullscreen/Control.FullScreen.min.js" />
-    <!-- preload script #end -->
+    <link rel="preload" as="script" href="assets/adminLTE/js/adminlte.min.js" /><!-- preload script #end -->
 
     <!-- stylesheet #start -->
     <link rel="stylesheet" href="assets/adminLTE/css/adminlte.min.css" />
@@ -112,6 +103,15 @@
         }
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKSPC8GN6W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKSPC8GN6W');
+    </script>
 
 </head>
 
@@ -141,6 +141,15 @@
                             <a href="" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
+                                    Beranda
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="terkini" class="nav-link ">
+                                <i class="nav-icon fas fa-water"></i>
+                                <p>
                                     Gempa M 5.0+ Terkini
                                 </p>
                             </a>
@@ -157,18 +166,18 @@
 
                         <li class="nav-item">
                             <a href="magnitudo-5" class="nav-link">
-                                <i class="nav-icon fas fa-wave-square"></i>
+                                <i class="nav-icon fas fa-file-contract"></i>
                                 <p>
-                                    60 Gempa M 5.0+
+                                    Data Gempa M 5.0+
                                 </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="dirasakan" class="nav-link">
-                                <i class="nav-icon fas fa-water"></i>
+                                <i class="nav-icon fas fa-file-contract"></i>
                                 <p>
-                                    30 Gempa Dirasakan
+                                    Data Gempa Dirasakan
                                 </p>
                             </a>
                         </li>
@@ -225,7 +234,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Gempa Bumi Magnitudo 5.0+ Terkini</h1>
+                            <h1>Beranda</h1>
                         </div>
 
                     </div>
@@ -235,71 +244,59 @@
             <section class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="card card-outline card-danger">
-                                <div class="card-header">
-                                    <strong>Data Gempa Bumi</strong>
+                        <div class="col-lg-6 col-12">
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3>Gempa Bumi</h3>
+                                    <h4>Magnitudo 5.0+ Terkini</h4>
                                 </div>
-                                <div class="card-body p-0">
-                                    <div id="mapid" style="width: 100%; height: 400px;"></div>
+                                <div class="icon">
+                                    <i class="fas fa-water"></i>
                                 </div>
-                                <div class="card-body p-0">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <tbody>
-                                                <tr>
-                                                    <th width="15%">Tanggal / Waktu</th>
-                                                    <td width="1%">:</td>
-                                                    <td id="tanggal"><small>{ ? }</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Magnitude</th>
-                                                    <td>:</td>
-                                                    <td id="magnitude"><small>{ ? }</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Kedalaman</th>
-                                                    <td>:</td>
-                                                    <td id="kedalaman"><small>{ ? }</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Koordinat</th>
-                                                    <td>:</td>
-                                                    <td id="koordinat"><small>{ ? }</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Wilayah</th>
-                                                    <td>:</td>
-                                                    <td>
-                                                        <ul>
-                                                            <li id="wilayah1"><small>{ ? }</small>
-                                                            </li>
-                                                            <li id="wilayah2"><small>{ ? }</small>
-                                                            </li>
-                                                            <li id="wilayah3"><small>{ ? }</small>
-                                                            </li>
-                                                            <li id="wilayah4"><small>{ ? }</small>
-                                                            </li>
-                                                            <li id="wilayah5"><small>{ ? }</small>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Potensi</th>
-                                                    <td>:</td>
-                                                    <td id="potensi"><small>{ ? }</small></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <a href="terkini" class="small-box-footer">Lihat <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3>Gempa Bumi</h3>
+                                    <h4>Berpotensi Tsunami Terkini</h4>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <small>
-                                        Sumber data: <a target="_blank" href="https://data.bmkg.go.id/">BMKG (Badan
-                                            Meteorologi, Klimatologi, dan Geofisika)</a>
-                                    </small>
+                                <div class="icon">
+                                    <i class="fas fa-swimmer"></i>
                                 </div>
+                                <a href="tsunami-terkini" class="small-box-footer">Lihat <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>Data Gempa Bumi</h3>
+                                    <h4>Magnitudo 5.0+</h4>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <a href="magnitudo-5" class="small-box-footer">Lihat <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>Data Gempa Bumi</h3>
+                                    <h4>Dirasakan</h4>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <a href="dirasakan" class="small-box-footer">Lihat <i
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -321,172 +318,6 @@
     </div>
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/adminLTE/js/adminlte.min.js"></script>
-    <script src="assets/leaflet/leaflet.js"></script>
-    <script src="assets/leaflet/spin/spin.js"></script>
-    <script src="assets/leaflet/spin/leaflet.spin.min.js"></script>
-    <script src="assets/leaflet/control-locate/L.Control.Locate.js"></script>
-    <script src="assets/leaflet/control-fullscreen/Control.FullScreen.min.js"></script>
-
-    <script>
-        var url = "https://hnf-cors.herokuapp.com/?https://lindu-bmkg-geojson.herokuapp.com/gempa/?data=m-5-terkini";
-
-        var geojson = jQuery.ajax({
-            type: "GET",
-            url: url,
-            dataType: "json",
-            success: function (response) {
-                console.log("Lantjar, bos!");
-            },
-            error: function (response) {
-                console.log("Galat, bos!");
-            },
-        });
-
-        var mbAttr =
-            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            mbUrl =
-                "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
-            maxZoom = 18,
-            minZoom = 2,
-            tileSize = 512,
-            zoomOffset = -1;
-
-        var dark = L.tileLayer(mbUrl, {
-            id: "mapbox/dark-v10",
-            maxZoom: maxZoom,
-            minZoom: minZoom,
-            tileSize: tileSize,
-            zoomOffset: zoomOffset,
-            attribution: mbAttr,
-        }),
-            light = L.tileLayer(mbUrl, {
-                id: "mapbox/light-v9",
-                maxZoom: maxZoom,
-                minZoom: minZoom,
-                tileSize: tileSize,
-                zoomOffset: zoomOffset,
-                attribution: mbAttr,
-            }),
-            satellite = L.tileLayer(mbUrl, {
-                id: "mapbox/satellite-v9",
-                maxZoom: maxZoom,
-                minZoom: minZoom,
-                tileSize: tileSize,
-                zoomOffset: zoomOffset,
-                attribution: mbAttr,
-            }),
-            street = L.tileLayer(mbUrl, {
-                id: "mapbox/streets-v11",
-                maxZoom: maxZoom,
-                minZoom: minZoom,
-                tileSize: tileSize,
-                zoomOffset: zoomOffset,
-                attribution: mbAttr,
-            });
-
-        // mymap
-        var mymap = L.map("mapid", {
-            fullscreenControl: true,
-            worldCopyJump: true,
-            preferCanvas: true,
-            maxBoundsViscosity: 1.0,
-            layers: [light],
-        }).setView([-1.263325, 118.606436], 4);
-
-        // base layers
-        var baseLayers = {
-            Dark: dark,
-            Light: light,
-            Satellite: satellite,
-            Street: street,
-        };
-
-        // control
-        L.control.layers(baseLayers).addTo(mymap);
-
-        // locate
-        L.control.locate({
-            icon: "fas fa-map-marker-alt",
-            drawCircle: false,
-            showPopup: true,
-            strings: {
-                title: "Lokasiku",
-                popup: "Lokasiku"
-            }
-        }).addTo(mymap);
-
-        // spin true
-        mymap.spin(true, {
-            lines: 20, // The number of lines to draw
-            length: 80, // The length of each line
-            width: 7, // The line thickness
-            radius: 84, // The radius of the inner circle
-            scale: 0.25, // Scales overall size of the spinner
-            corners: 1, // Corner roundness (0..1)
-            speed: 2.2, // Rounds per second
-            rotate: 0, // The rotation offset
-            animation: "spinner-line-fade-quick", // The CSS animation name for the lines
-            direction: 1, // 1: clockwise, -1: counterclockwise
-            color: "#ffffff", // CSS color or array of colors
-            fadeColor: "transparent", // CSS color or array of colors
-            top: "50%", // Top position relative to parent
-            left: "50%", // Left position relative to parent
-            shadow: "0 0 1px transparent", // Box-shadow for the lines
-            zIndex: 2000000000, // The z-index (defaults to 2e9)
-            className: "spinner", // The CSS class to assign to the spinner
-            position: "absolute", // Element positioning
-        });
-
-        // marker icon
-        var MarkerIcon = L.Icon.extend({
-            options: {
-                iconSize: [32, 32]
-            }
-        });
-
-        var RedMarkerIcon = new MarkerIcon({
-            iconUrl: 'assets/image/map-marker-icon.png'
-        })
-
-        // geojson
-        $.when(geojson).done(function () {
-            // spin false
-            mymap.spin(false);
-
-            // data
-            if (geojson.responseJSON.success) {
-                $('#tanggal').text(geojson.responseJSON.features[0].properties.tanggal + ' ' + geojson
-                    .responseJSON.features[0].properties.jam);
-                $('#magnitude').text(geojson.responseJSON.features[0].properties.magnitude);
-                $('#kedalaman').text(geojson.responseJSON.features[0].properties.kedalaman);
-                $('#koordinat').text(geojson.responseJSON.features[0].properties.bujur + ' ' + geojson
-                    .responseJSON.features[0].properties.lintang);
-                $('#potensi').text(geojson.responseJSON.features[0].properties.potensi);
-                $('#wilayah1').text(geojson.responseJSON.features[0].properties.wilayah1);
-                $('#wilayah2').text(geojson.responseJSON.features[0].properties.wilayah2);
-                $('#wilayah3').text(geojson.responseJSON.features[0].properties.wilayah3);
-                $('#wilayah4').text(geojson.responseJSON.features[0].properties.wilayah4);
-                $('#wilayah5').text(geojson.responseJSON.features[0].properties.wilayah5);
-                $("#eqmap").attr('src', geojson.responseJSON.features[0].properties.peta);
-
-                // update setView
-                mymap.setView([geojson.responseJSON.features[0].geometry.coordinates[1], geojson.responseJSON
-                    .features[0].geometry.coordinates[0]
-                ], 6);
-            }
-
-            // point
-            var earthquake = L.geoJSON(geojson.responseJSON.features, {
-                pointToLayer: function (feature, latlng) {
-                    return L.marker(latlng, {
-                        icon: RedMarkerIcon
-                    }).bindTooltip('<b>Episentrum Gempa</b>');
-                }
-            }).addTo(mymap);
-        });
-    </script>
 </body>
 
 </html>

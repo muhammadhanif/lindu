@@ -4,32 +4,34 @@
 <html>
 
 <head>
-    <title>Data 30 Gempa Bumi Dirasakan</title>
+    <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
 
     <!-- meta #start -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="author" content="hanifmu.com" />
-    <meta name="title" content="Data 30 Gempa Bumi Dirasakan" />
+    <meta name="author" content="Muhammad Hanif" />
+    <meta name="title" content="Gempa Bumi Magnitudo 5.0+ Terkini" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta name="description" content="Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia." />
     <!-- meta #end -->
 
     <!-- meta twitter #start -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Data 30 Gempa Bumi Dirasakan" />
-    <meta name="twitter:description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta name="twitter:title" content="Gempa Bumi Magnitudo 5.0+ Terkini" />
+    <meta name="twitter:description"
+        content="Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia." />
     <meta name="twitter:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <!-- meta twitter #end -->
 
     <!-- meta facebook #start -->
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Data 30 Gempa Bumi Dirasakan" />
     <meta property="og:site_name" content="lindu.hanifmu.com" />
-    <meta property="og:url" content="https://lindu.hanifmu.com/dirasakan" />
-    <meta property="og:description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta property="og:url" content="https://lindu.hanifmu.com/" />
+    <meta property="og:title" content="Gempa Bumi Magnitudo 5.0+ Terkini" />
+    <meta property="og:description"
+        content="Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia." />
     <meta property="og:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <meta property="og:image:secure_url" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <!-- meta facebook #end -->
@@ -38,6 +40,7 @@
     <link rel="preconnect" href="https://api.mapbox.com" />
     <link rel="preconnect" href="https://lindu.hanifmu.com" />
     <link rel="preconnect" href="https://hnf-cors.herokuapp.com" />
+    <link rel="preconnect" href="https://raw.githubusercontent.com" />
     <link rel="preconnect" href="https://lindu-bmkg-geojson.herokuapp.com" />
     <!-- preconnect #end -->
 
@@ -45,65 +48,61 @@
     <link rel="dns-prefetch" href="https://api.mapbox.com" />
     <link rel="dns-prefetch" href="https://lindu.hanifmu.com" />
     <link rel="dns-prefetch" href="https://hnf-cors.herokuapp.com" />
+    <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
     <link rel="dns-prefetch" href="https://lindu-bmkg-geojson.herokuapp.com" />
     <!-- dns-prefetch #end -->
 
     <!-- preload style #start -->
-    <link rel="preload" as="style" href="../assets/adminLTE/css/adminlte.min.css" />
-    <link rel="preload" as="style" href="../assets/fontawesome-free/css/all.min.css" />
-    <link rel="preload" as="style" href="../assets/leaflet/leaflet.css" />
-    <link rel="preload" as="style" href="../assets/leaflet/control-fullscreen/Control.FullScreen.css" />
-    <link rel="preload" as="style" href="../assets/leaflet/control-locate/L.Control.Locate.min.css" />
-    <link rel="preload" as="style" href="../assets/datatables-bs4/css/dataTables.bootstrap4.min.css" />
-    <link rel="preload" as="style" href="../assets/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="preload" as="style" href="assets/adminLTE/css/adminlte.min.css" />
+    <link rel="preload" as="style" href="assets/fontawesome-free/css/all.min.css" />
+    <link rel="preload" as="style" href="assets/leaflet/leaflet.css" />
+    <link rel="preload" as="style" href="assets/leaflet/control-locate/L.Control.Locate.min.css" />
+    <link rel="preload" as="style" href="assets/leaflet/control-fullscreen/Control.FullScreen.css" />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" />
     <!-- preload style #end -->
 
     <!-- preload script #start -->
-    <link rel="preload" as="script" href="../assets/jquery/jquery.min.js" />
-    <link rel="preload" as="script" href="../assets/adminLTE/js/adminlte.min.js" />
-    <link rel="preload" as="script" href="../assets/leaflet/leaflet.js" />
-    <link rel="preload" as="script" href="../assets/leaflet/spin/spin.js" />
-    <link rel="preload" as="script" href="../assets/leaflet/spin/leaflet.spin.min.js" />
-    <link rel="preload" as="script" href="../assets/leaflet/control-locate/L.Control.Locate.js" />
-    <link rel="preload" as="script" href="../assets/leaflet/control-fullscreen/Control.FullScreen.min.js" />
-    <link rel="preload" as="script" href="../assets/datatables/jquery.dataTables.min.js" />
-    <link rel="preload" as="script" href="../assets/datatables-bs4/js/dataTables.bootstrap4.min.js" />
-    <link rel="preload" as="script" href="../assets/datatables-responsive/js/dataTables.responsive.min.js" />
-    <link rel="preload" as="script" href="../assets/datatables-responsive/js/responsive.bootstrap4.min.js" />
+    <link rel="preload" as="script" href="assets/jquery/jquery.min.js" />
+    <link rel="preload" as="script" href="assets/adminLTE/js/adminlte.min.js" />
+    <link rel="preload" as="script" href="assets/leaflet/leaflet.js" />
+    <link rel="preload" as="script" href="assets/leaflet/spin/spin.js" />
+    <link rel="preload" as="script" href="assets/leaflet/spin/leaflet.spin.min.js" />
+    <link rel="preload" as="script" href="assets/leaflet/control-locate/L.Control.Locate.js" />
+    <link rel="preload" as="script" href="assets/leaflet/control-fullscreen/Control.FullScreen.min.js" />
     <!-- preload script #end -->
 
     <!-- stylesheet #start -->
-    <link rel="stylesheet" href="../assets/adminLTE/css/adminlte.min.css" />
-    <link rel="stylesheet" href="../assets/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="../assets/leaflet/leaflet.css" />
-    <link rel="stylesheet" href="../assets/leaflet/control-locate/L.Control.Locate.min.css" />
-    <link rel="stylesheet" href="../assets/leaflet/control-fullscreen/Control.FullScreen.css" />
-    <link rel="stylesheet" href="../assets/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../assets/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/adminLTE/css/adminlte.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="assets/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="assets/leaflet/control-locate/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="assets/leaflet/control-fullscreen/Control.FullScreen.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
     <!-- stylesheet #end -->
 
     <!-- shortcut icon / canonical #start -->
-    <link rel="canonical" href="https://lindu.hanifmu.com/dirasakan" />
+    <link rel="canonical" href="https://lindu.hanifmu.com/" />
 
     <link rel="shortcut icon" type="image/x-icon" href="https://hanifmu.com/hanifmu-ico.png" />
     <!-- shortcut icon / canonical #end -->
+
+    <link rel="alternate" type="application/rss+xml" href="https://lindu.hanifmu.com/index.xml">
+    <link rel="alternate" type="application/json" href="https://lindu.hanifmu.com/index.json">
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
             "@type": "Event",
-            "name": "Data 30 Gempa Bumi Dirasakan",
+            "name": "Gempa Bumi Magnitudo 5.0+ Terkini",
             "location": {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "Indonesia"
-                }
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Indonesia"
+            }
             },
-            "startDate": "2021-01-01T00:00:00.000Z",
-            "description": "Data 30 gempa bumi dirasakan yang terjadi di wilayah Indonesia.",
+            "startDate": "2021-01-01",
+            "description": "Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia.",
             "image": "https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png",
             "performer": {
                 "@type": "Person",
@@ -111,6 +110,16 @@
             },
             "inLanguage": "id"
         }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKSPC8GN6W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKSPC8GN6W');
     </script>
 
 </head>
@@ -126,7 +135,7 @@
         </nav>
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="../" class="brand-link">
+            <a href="" class="brand-link">
                 <img src="https://hanifmu.com/hanifmu-ico.png" alt="Gempa" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">LINDU</span>
@@ -138,17 +147,8 @@
                         data-accordion="false">
                         <li class="nav-header">Menu Utama</li>
                         <li class="nav-item">
-                            <a href="../" class="nav-link">
+                            <a href="" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Beranda
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="../terkini" class="nav-link">
-                                <i class="nav-icon fas fa-water"></i>
                                 <p>
                                     Gempa M 5.0+ Terkini
                                 </p>
@@ -156,7 +156,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="../tsunami-terkini" class="nav-link">
+                            <a href="tsunami-terkini" class="nav-link">
                                 <i class="nav-icon fas fa-swimmer"></i>
                                 <p>
                                     Gempa & Tsunami Terkini
@@ -165,19 +165,19 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="../magnitudo-5" class="nav-link">
-                                <i class="nav-icon fas fa-file-contract"></i>
+                            <a href="magnitudo-5" class="nav-link">
+                                <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
-                                    Data Gempa M 5.0+
+                                    60 Gempa M 5.0+
                                 </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" class="nav-link active">
-                                <i class="nav-icon fas fa-file-contract"></i>
+                            <a href="dirasakan" class="nav-link">
+                                <i class="nav-icon fas fa-water"></i>
                                 <p>
-                                    Data Gempa Dirasakan
+                                    30 Gempa Dirasakan
                                 </p>
                             </a>
                         </li>
@@ -234,7 +234,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Data 30 Gempa Bumi Dirasakan</h1>
+                            <h1>Gempa Bumi Magnitudo 5.0+ Terkini</h1>
                         </div>
 
                     </div>
@@ -245,40 +245,61 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card card-outline card-danger">
                                 <div class="card-header">
-                                    <strong>Data Gempa</strong>
+                                    <strong>Data Gempa Bumi</strong>
                                 </div>
                                 <div class="card-body p-0">
                                     <div id="mapid" style="width: 100%; height: 400px;"></div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-0">
                                     <div class="table-responsive">
-                                        <table id="gempa" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Magnitude</th>
-                                                    <th>Kedalaman</th>
-                                                    <th>Koordinat</th>
-                                                    <th>Keterangan</th>
-                                                    <th>Dirasakan</th>
-                                                </tr>
-                                            </thead>
+                                        <table class="table table-striped">
                                             <tbody>
-
-                                            <tfoot>
                                                 <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Magnitude</th>
-                                                    <th>Kedalaman</th>
-                                                    <th>Koordinat</th>
-                                                    <th>Keterangan</th>
-                                                    <th>Dirasakan</th>
+                                                    <th width="15%">Tanggal / Waktu</th>
+                                                    <td width="1%">:</td>
+                                                    <td id="tanggal"><small>{ ? }</small></td>
                                                 </tr>
-                                            </tfoot>
+                                                <tr>
+                                                    <th>Magnitude</th>
+                                                    <td>:</td>
+                                                    <td id="magnitude"><small>{ ? }</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Kedalaman</th>
+                                                    <td>:</td>
+                                                    <td id="kedalaman"><small>{ ? }</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Koordinat</th>
+                                                    <td>:</td>
+                                                    <td id="koordinat"><small>{ ? }</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Wilayah</th>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li id="wilayah1"><small>{ ? }</small>
+                                                            </li>
+                                                            <li id="wilayah2"><small>{ ? }</small>
+                                                            </li>
+                                                            <li id="wilayah3"><small>{ ? }</small>
+                                                            </li>
+                                                            <li id="wilayah4"><small>{ ? }</small>
+                                                            </li>
+                                                            <li id="wilayah5"><small>{ ? }</small>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Potensi</th>
+                                                    <td>:</td>
+                                                    <td id="potensi"><small>{ ? }</small></td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -305,24 +326,18 @@
                 Theme by <a target="_blank" href="https://adminlte.io">AdminLTE</a>
             </small>
         </footer>
+
     </div>
-
-    <script src="../assets/jquery/jquery.min.js"></script>
-    <script src="../assets/adminLTE/js/adminlte.min.js"></script>
-    <script src="../assets/leaflet/leaflet.js"></script>
-    <script src="../assets/leaflet/spin/spin.js"></script>
-    <script src="../assets/leaflet/spin/leaflet.spin.min.js"></script>
-    <script src="../assets/leaflet/control-locate/L.Control.Locate.js"></script>
-    <script src="../assets/leaflet/control-fullscreen/Control.FullScreen.min.js"></script>
-    <script src="../assets/datatables/jquery.dataTables.min.js"></script>
-    <script src="../assets/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../assets/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-
-
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/adminLTE/js/adminlte.min.js"></script>
+    <script src="assets/leaflet/leaflet.js"></script>
+    <script src="assets/leaflet/spin/spin.js"></script>
+    <script src="assets/leaflet/spin/leaflet.spin.min.js"></script>
+    <script src="assets/leaflet/control-locate/L.Control.Locate.js"></script>
+    <script src="assets/leaflet/control-fullscreen/Control.FullScreen.min.js"></script>
 
     <script>
-        var url = "https://hnf-cors.herokuapp.com/?https://lindu-bmkg-geojson.herokuapp.com/gempa/?data=dirasakan";
+        var url = "https://hnf-cors.herokuapp.com/?https://lindu-bmkg-geojson.herokuapp.com/gempa/?data=m-5-terkini";
 
         var geojson = jQuery.ajax({
             type: "GET",
@@ -380,7 +395,6 @@
                 attribution: mbAttr,
             });
 
-
         // mymap
         var mymap = L.map("mapid", {
             fullscreenControl: true,
@@ -406,7 +420,6 @@
             icon: "fas fa-map-marker-alt",
             drawCircle: false,
             showPopup: true,
-            setView: false,
             strings: {
                 title: "Lokasiku",
                 popup: "Lokasiku"
@@ -438,12 +451,12 @@
         // marker icon
         var MarkerIcon = L.Icon.extend({
             options: {
-                iconSize: [16, 16]
+                iconSize: [32, 32]
             }
         });
 
         var RedMarkerIcon = new MarkerIcon({
-            iconUrl: '../assets/image/map-marker-icon.png'
+            iconUrl: 'assets/image/map-marker-icon.png'
         })
 
         // geojson
@@ -451,85 +464,36 @@
             // spin false
             mymap.spin(false);
 
+            // data
+            if (geojson.responseJSON.success) {
+                $('#tanggal').text(geojson.responseJSON.features[0].properties.tanggal + ' ' + geojson
+                    .responseJSON.features[0].properties.jam);
+                $('#magnitude').text(geojson.responseJSON.features[0].properties.magnitude);
+                $('#kedalaman').text(geojson.responseJSON.features[0].properties.kedalaman);
+                $('#koordinat').text(geojson.responseJSON.features[0].properties.bujur + ' ' + geojson
+                    .responseJSON.features[0].properties.lintang);
+                $('#potensi').text(geojson.responseJSON.features[0].properties.potensi);
+                $('#wilayah1').text(geojson.responseJSON.features[0].properties.wilayah1);
+                $('#wilayah2').text(geojson.responseJSON.features[0].properties.wilayah2);
+                $('#wilayah3').text(geojson.responseJSON.features[0].properties.wilayah3);
+                $('#wilayah4').text(geojson.responseJSON.features[0].properties.wilayah4);
+                $('#wilayah5').text(geojson.responseJSON.features[0].properties.wilayah5);
+                $("#eqmap").attr('src', geojson.responseJSON.features[0].properties.peta);
+
+                // update setView
+                mymap.setView([geojson.responseJSON.features[0].geometry.coordinates[1], geojson.responseJSON
+                    .features[0].geometry.coordinates[0]
+                ], 6);
+            }
+
             // point
             var earthquake = L.geoJSON(geojson.responseJSON.features, {
                 pointToLayer: function (feature, latlng) {
                     return L.marker(latlng, {
                         icon: RedMarkerIcon
-                    })
-                        .bindTooltip(
-                            '<b>Tanggal: </b>' + feature.properties.tanggal +
-                            '<br />' +
-                            '<b>Magnitude: </b>' + feature.properties.magnitude +
-                            '<br />' +
-                            '<b>Kedalaman: </b>' + feature.properties.kedalaman +
-                            '<br />' +
-                            '<b>Dirasakan: </b>' + feature.properties.dirasakan +
-                            '<br />' +
-                            '<b>Keterangan: </b>' + feature.properties.keterangan
-                        );
+                    }).bindTooltip('<b>Episentrum Gempa</b>');
                 }
             }).addTo(mymap);
-        });
-    </script>
-
-    <script>
-        $(function () {
-            var t = $('#gempa').DataTable({
-                "responsive": true,
-                "autoWidth": false,
-                "language": {
-                    "url": "../assets/datatables/Indonesian.json"
-                },
-                "ajax": {
-                    "url": "https://hnf-cors.herokuapp.com/?https://lindu-bmkg-geojson.herokuapp.com/gempa/?data=dirasakan",
-                    "dataSrc": "features",
-                    "deferRender": true
-                },
-                "paging": true,
-                "columnDefs": [{
-                    "searchable": false,
-                    "orderable": false,
-                    "targets": 0,
-                }],
-                "columns": [{
-                    "data": null,
-                    "sClass": "text-center"
-                }, {
-                    "data": "properties.tanggal",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.magnitude",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.kedalaman",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.posisi",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.keterangan",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.dirasakan",
-                    "sClass": "text-center"
-                }
-                ]
-            });
-
-            t.on('draw.dt', function () {
-                var PageInfo = $('#gempa').DataTable().page.info();
-                t.column(0, {
-                    page: 'current'
-                }).nodes().each(function (cell, i) {
-                    cell.innerHTML = i + 1 + PageInfo.start;
-                });
-            });
         });
     </script>
 </body>
