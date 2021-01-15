@@ -1,13 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel> 
+    <channel>
+        <title>LINDU</title>
+        <link>https://lindu.hanifmu.com/</link>
+        <description>Informasi gempa bumi yang terjadi di wilayah Indonesia.</description> 
        <atom:link href="https://lindu.hanifmu.com/index.xml" rel="self" type="application/rss+xml"/>
-
-        <item>
-            <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
-            <link>https://lindu.hanifmu.com/</link>
-            <guid>https://lindu.hanifmu.com/</guid>
-            <description><p>Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia.</p></description>
-        </item>
         <item>
             <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
             <link>https://lindu.hanifmu.com/terkini/</link>
