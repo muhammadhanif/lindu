@@ -1,0 +1,42 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel> 
+       <atom:link href="https://lindu.hanifmu.com/index.xml" rel="self" type="application/rss+xml"/>
+
+        <item>
+            <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
+            <link>https://lindu.hanifmu.com/</link>
+            <guid>https://lindu.hanifmu.com/</guid>
+            <description><p>Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia.</p></description>
+        </item>
+        <item>
+            <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
+            <link>https://lindu.hanifmu.com/terkini/</link>
+            <guid>https://lindu.hanifmu.com/terkini/</guid>
+            <description><p>Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia.</p></description>
+        </item>
+        <item>
+            <title>Gempa Bumi Berpotensi Tsunami Terkini</title>
+            <link>https://lindu.hanifmu.com/tsunami-terkini/</link>
+            <guid>https://lindu.hanifmu.com/tsunami-terkini/</guid>
+            <description><p>Informasi gempa bumi berpotensi tsunami terkini yang terjadi di wilayah Indonesia.</p></description>
+        </item>
+        <item>
+            <title>Data 60 Gempa Bumi Magnitudo 5.0+</title>
+            <link>https://lindu.hanifmu.com/magnitudo-5/</link>
+            <guid>https://lindu.hanifmu.com/magnitudo-5/</guid>
+            <description><p>Data 60 gempa bumi magnitudo 5.0+ yang terjadi di wilayah Indonesia.</p></description>
+        </item>
+        <item>
+            <title>Data 30 Gempa Bumi Dirasakan</title>
+            <link>https://lindu.hanifmu.com/dirasakan/</link>
+            <guid>https://lindu.hanifmu.com/dirasakan/</guid>
+            <description><p>Data 30 gempa bumi dirasakan yang terjadi di wilayah Indonesia.</p></description>
+        </item>
+        <item>
+            <title>Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia</title>
+            <link>https://lindu.hanifmu.com/usgs/</link>
+            <guid>https://lindu.hanifmu.com/usgs/</guid>
+            <description><p>Peta episentrum gempa bumi dengan magnitudo 5.0+ yang terjadi di Indonesia dan sekitarnya mulai tahun 1900-an sampai dengan sekarang. Sumber data diambil dari USGS.</p></description>
+        </item>
+    </channel>
+</rss>

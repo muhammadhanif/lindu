@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="author" content="hanifmu.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia" />
+  <meta name="description"
+    content="Peta episentrum gempa bumi dengan magnitudo 5.0+ yang terjadi di Indonesia dan sekitarnya mulai tahun 1900-an sampai dengan sekarang. Sumber data diambil dari USGS." />
+
+  <!-- twitter #start -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia" />
+  <meta name="twitter:description"
+    content="Peta episentrum gempa bumi dengan magnitudo 5.0+ yang terjadi di Indonesia dan sekitarnya mulai tahun 1900-an sampai dengan sekarang. Sumber data diambil dari USGS." />
+  <meta name="twitter:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
+  <!-- twitter #end -->
+
+  <!-- facebook #start -->
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia" />
+  <meta property="og:description"
+    content="Peta episentrum gempa bumi dengan magnitudo 5.0+ yang terjadi di Indonesia dan sekitarnya mulai tahun 1900-an sampai dengan sekarang. Sumber data diambil dari USGS." />
+  <meta property="og:url" content="https://lindu.hanifmu.com/usgs" />
+  <meta property="og:site_name" content="lindu.hanifmu.com" />
+  <meta property="og:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
+  <meta property="og:image:secure_url" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
+  <!-- facebook #end -->
+
+  <!-- preconnect #start -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://earthquake.usgs.gov" />
+  <!-- preconnect #end -->
+
+  <!-- dns-prefetch #start -->
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://earthquake.usgs.gov" />
+  <!-- dns-prefetch #end -->
+
+  <!-- preload style #start -->
+  <link rel="preload" as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.6.0/Control.FullScreen.css"
+    integrity="sha512-KQk/GTCcAywe4iEOhnZ6ZmWDNv/3NvOE6f0iUvrNVCX/oD7+sPXAeDP90aOX3EXHmerC6gDYUlUBaSd4hxjWEw=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.1/css/all.min.css"
+    integrity="sha512-BxQjx52Ea/sanKjJ426PAhxQJ4BPfahiSb/ohtZ2Ipgrc5wyaTSgTwPhhZ/xC66vvg+N4qoDD1j0VcJAqBTjhQ=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="style"
+    href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css" />
+  <!-- preload style #end -->
+
+  <!-- preload script #start -->
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" />
+  <link rel="preload" as="script" href="../assets/js/lindu.js" />
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="script"
+    href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"
+    integrity="sha512-qSnlnyh7EcD3vTqRoSP4LYsy2yVuqqmnkM9tW4dWo6xvAoxuVXyM36qZK54fyCmHoY1iKi9FJAUZrlPqmGNXFw=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="script"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.6.0/Control.FullScreen.min.js"
+    integrity="sha512-AmR6ebpa6q+35FINPlrJIYOOFeDIw5B+rcrMnBjZpMl1mehG/R7jVYPJpxFNc5ljk/7af5vAYuRl9mCu9avdDw=="
+    crossorigin="anonymous" />
+  <link rel="preload" as="script"
+    href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js" />
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"
+    integrity="sha512-C7tgVIfPE0ivBKcs2WstAh5y7Njir2odGBjnuIa64SmVzZIoTb8kRrNursRzEv4bNcesPywtVAXqH1GmqRBmpg=="
+    crossorigin="anonymous" />
+  <link rel=" preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.Spin/1.1.1/leaflet.spin.min.js"
+    integrity="sha512-0XwHwDvBg9jLZlGiwMYZkDM88lmMWazxvreRDE9liyaBZXmKRV5rB50hsyatczCVjCumGl0gpet2EEoHvBLmcA=="
+    crossorigin="anonymous" />
+  <!-- preload script #end -->
+
+  <!-- stylesheet #start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.6.0/Control.FullScreen.css"
+    integrity="sha512-KQk/GTCcAywe4iEOhnZ6ZmWDNv/3NvOE6f0iUvrNVCX/oD7+sPXAeDP90aOX3EXHmerC6gDYUlUBaSd4hxjWEw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.1/css/all.min.css"
+    integrity="sha512-BxQjx52Ea/sanKjJ426PAhxQJ4BPfahiSb/ohtZ2Ipgrc5wyaTSgTwPhhZ/xC66vvg+N4qoDD1j0VcJAqBTjhQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css">
+  <!-- stylesheet #end -->
+
+  <!-- shortcut icon / canonical #start -->
+  <link rel="canonical" href="https://lindu.hanifmu.com/usgs" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://hanifmu.com/hanifmu-ico.png" />
+  <!-- shortcut icon / canonical #end -->
+
+  <title>Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    #earthquakeID {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    #earthquakeID {
+      height: 100%;
+      width: 100vw;
+    }
+
+    .pd-top-1 {
+      padding-top: 1rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Event",
+      "name": "Peta Episentrum Gempa Bumi Magnitudo 5.0+ - Indonesia",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Indonesia"
+        }
+      },
+      "startDate": "1900-01-01T00:00:00.000Z",
+      "description": "Peta episentrum gempa bumi dengan magnitudo 5.0+ yang terjadi di Indonesia dan sekitarnya mulai tahun 1900-an sampai dengan sekarang. Sumber data diambil dari USGS.",
+      "image": "https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png",
+      "performer": {
+        "@type": "Person",
+        "name": "USGS (United States Geological Survey)"
+      },
+      "inLanguage": "id"
+    }
+  </script>
+</head>
+
+<body>
+  <div id="earthquakeID"></div>
+
+  <div id="sidebar" class="leaflet-sidebar collapsed">
+    <!-- nav tabs -->
+    <div class="leaflet-sidebar-tabs">
+      <!-- top aligned tabs -->
+      <ul role="tablist">
+        <li>
+          <a href="#informasi" role="tab"><i class="fa fa-bars active"></i></a>
+        </li>
+        <li>
+          <a href="../"><i class="fas fa-home"></i></a>
+        </li>
+      </ul>
+
+      <!-- bottom aligned tabs -->
+      <ul role="tablist">
+        <li>
+          <a target="_blank" href="https://hanifmu.com"><i class="fa fa-globe"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- panel content -->
+    <div class="leaflet-sidebar-content">
+      <div class="leaflet-sidebar-pane" id="informasi">
+        <h1 class="leaflet-sidebar-header">
+          Informasi
+          <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+        </h1>
+
+        <p class="pd-top-1" align="justify">
+          Peta ini menampilkan episentrum gempa bumi dengan magnitudo
+          5.0+ yang terjadi di wilayah Indonesia dan sekitarnya yang
+          terjadi pada tahun 1900-an sampai dengan sekarang.
+        </p>
+
+        <p align="justify">
+          Data episentrum gempa diambil dari situs
+          <a href="https://earthquake.usgs.gov/fdsnws/event/1/" target="_blank">USGS</a>
+          dengan parameter sebagai berikut:
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr class="text-center">
+                <th scope="col" width="2%">#</th>
+                <th scope="col">Parameter</th>
+                <th scope="col">Nilai</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <th scope="row">1</th>
+                <td>format</td>
+                <td id="format"></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>starttime</td>
+                <td id="starttime"></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>minmagnitude</td>
+                <td id="minmagnitude"></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>minlatitude</td>
+                <td id="minlatitude"></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>maxlatitude</td>
+                <td id="maxlatitude"></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>minlongitude</td>
+                <td id="minlongitude"></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>maxlongitude</td>
+                <td id="maxlongitude"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        Parameter di atas menghasilkan data yang dapat diakses di URL berikut ini:
+        </p>
+
+        <p>
+          <a id="url" target="_blank" href="">
+            <button type="button" class="btn btn-primary btn-flat btn-block"><small>Data</small></button>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"
+    integrity="sha512-qSnlnyh7EcD3vTqRoSP4LYsy2yVuqqmnkM9tW4dWo6xvAoxuVXyM36qZK54fyCmHoY1iKi9FJAUZrlPqmGNXFw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.6.0/Control.FullScreen.min.js"
+    integrity="sha512-AmR6ebpa6q+35FINPlrJIYOOFeDIw5B+rcrMnBjZpMl1mehG/R7jVYPJpxFNc5ljk/7af5vAYuRl9mCu9avdDw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"
+    integrity="sha512-C7tgVIfPE0ivBKcs2WstAh5y7Njir2odGBjnuIa64SmVzZIoTb8kRrNursRzEv4bNcesPywtVAXqH1GmqRBmpg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.Spin/1.1.1/leaflet.spin.min.js"
+    integrity="sha512-0XwHwDvBg9jLZlGiwMYZkDM88lmMWazxvreRDE9liyaBZXmKRV5rB50hsyatczCVjCumGl0gpet2EEoHvBLmcA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.icon.glyph@0.3.0/Leaflet.Icon.Glyph.min.js"></script>
+
+  <script>
+    var format = "geojson";
+    var starttime = "1900-01-01";
+    var minmagnitude = 5;
+    var minlatitude = -13;
+    var maxlatitude = 9;
+    var minlongitude = 88;
+    var maxlongitude = 148;
+
+    var url =
+      "https://earthquake.usgs.gov/fdsnws/event/1/query?format=" +
+      format +
+      "&starttime=" +
+      starttime +
+      "&minmagnitude=" +
+      minmagnitude +
+      "&minlatitude=" +
+      minlatitude +
+      "&maxlatitude=" +
+      maxlatitude +
+      "&minlongitude=" +
+      minlongitude +
+      "&maxlongitude=" +
+      maxlongitude;
+
+    $("#url").attr("href", url);
+    $("#format").text(format);
+    $("#starttime").text(starttime);
+    $("#minmagnitude").text(minmagnitude);
+    $("#minlatitude").text(minlatitude);
+    $("#maxlatitude").text(maxlatitude);
+    $("#minlongitude").text(minlongitude);
+    $("#maxlongitude").text(maxlongitude);
+
+    var usgs = jQuery.ajax({
+      type: "GET",
+      url: url,
+      dataType: "json",
+      success: function (response) {
+        console.log("Lancar, bos!");
+      },
+      error: function (response) {
+        console.log("Galat, bos!");
+      },
+    });
+
+    var mbAttr =
+      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      mbUrl =
+        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
+      maxZoom = 18,
+      minZoom = 2,
+      tileSize = 512,
+      zoomOffset = -1;
+
+    var dark = L.tileLayer(mbUrl, {
+      id: "mapbox/dark-v10",
+      maxZoom: maxZoom,
+      minZoom: minZoom,
+      tileSize: tileSize,
+      zoomOffset: zoomOffset,
+      attribution: mbAttr,
+    }),
+      light = L.tileLayer(mbUrl, {
+        id: "mapbox/light-v9",
+        maxZoom: maxZoom,
+        minZoom: minZoom,
+        tileSize: tileSize,
+        zoomOffset: zoomOffset,
+        attribution: mbAttr,
+      }),
+      satellite = L.tileLayer(mbUrl, {
+        id: "mapbox/satellite-v9",
+        maxZoom: maxZoom,
+        minZoom: minZoom,
+        tileSize: tileSize,
+        zoomOffset: zoomOffset,
+        attribution: mbAttr,
+      }),
+      street = L.tileLayer(mbUrl, {
+        id: "mapbox/streets-v11",
+        maxZoom: maxZoom,
+        minZoom: minZoom,
+        tileSize: tileSize,
+        zoomOffset: zoomOffset,
+        attribution: mbAttr,
+      });
+
+    // mymap
+    var mymap = L.map("earthquakeID", {
+      fullscreenControl: true,
+      worldCopyJump: true,
+      preferCanvas: true,
+      maxBoundsViscosity: 1.0,
+      layers: [light],
+    }).setView([-1.263325, 118.606436], 5);
+
+    // control
+    var baseLayers = {
+      Dark: dark,
+      Light: light,
+      Satellite: satellite,
+      Street: street,
+    };
+
+    L.control.layers(baseLayers).addTo(mymap);
+
+    // spin true
+    mymap.spin(true, {
+      lines: 20, // The number of lines to draw
+      length: 80, // The length of each line
+      width: 7, // The line thickness
+      radius: 84, // The radius of the inner circle
+      scale: 0.25, // Scales overall size of the spinner
+      corners: 1, // Corner roundness (0..1)
+      speed: 2.2, // Rounds per second
+      rotate: 0, // The rotation offset
+      animation: "spinner-line-fade-quick", // The CSS animation name for the lines
+      direction: 1, // 1: clockwise, -1: counterclockwise
+      color: "#ffffff", // CSS color or array of colors
+      fadeColor: "transparent", // CSS color or array of colors
+      top: "50%", // Top position relative to parent
+      left: "50%", // Left position relative to parent
+      shadow: "0 0 1px transparent", // Box-shadow for the lines
+      zIndex: 2000000000, // The z-index (defaults to 2e9)
+      className: "spinner", // The CSS class to assign to the spinner
+      position: "absolute", // Element positioning
+    });
+
+    // sidebar
+    var sidebar = L.control
+      .sidebar({
+        container: "sidebar",
+        autopan: false,
+        closeButton: true
+      })
+      .addTo(mymap)
+      .open("informasi");
+
+    sidebar.close();
+
+    // point
+    $.when(usgs).done(function () {
+      moment.locale("ID");
+
+      // spin false
+      mymap.spin(false);
+
+      var earthquake = L.geoJSON(usgs.responseJSON.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            radius: 2,
+            color: "red"
+          });
+        },
+        onEachFeature: function (feature, layer) {
+          if (
+            feature.properties &&
+            feature.properties.mag &&
+            feature.properties.place &&
+            feature.properties.time
+          ) {
+            layer.bindTooltip(
+              "<b>Tanggal:</b> " +
+              moment(feature.properties.time).format(
+                "DD MMMM Y [Pukul] HH:mm [WIB]"
+              ) +
+              "<br>" +
+              "<b>Magnitudo:</b> " +
+              feature.properties.mag +
+              "<br>" +
+              "<b>Lokasi:</b> " +
+              feature.properties.place
+
+            );
+          }
+        },
+      }).addTo(mymap);
+    });
+  </script>
+</body>
+
+</html>
