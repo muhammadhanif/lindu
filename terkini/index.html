@@ -178,15 +178,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="../tsunami-terkini" class="nav-link">
-                                <i class="nav-icon fas fa-swimmer"></i>
-                                <p>
-                                    Gempa & Tsunami Terkini
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="../magnitudo-5" class="nav-link">
                                 <i class="nav-icon fas fa-file-contract"></i>
                                 <p>
@@ -279,81 +270,44 @@
                                         <table class="table table-striped">
                                             <tbody>
                                                 <tr>
-                                                    <th width="15%">Tanggal / Waktu</th>
+                                                    <th width="17%">Tanggal / Waktu</th>
                                                     <td width="1%">:</td>
                                                     <td id="tanggal">
-                                                        <small>
-                                                            <i class="fas fa-database"></i>
-                                                        </small>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Magnitude</th>
                                                     <td>:</td>
                                                     <td id="magnitude">
-                                                        <small>
-                                                            <i class="fas fa-database"></i>
-                                                        </small>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Kedalaman</th>
                                                     <td>:</td>
-                                                    <td id="kedalaman">
-                                                        <small>
-                                                            <i class="fas fa-database"></i>
-                                                        </small>
-                                                    </td>
+                                                    <td id="kedalaman"></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Koordinat</th>
                                                     <td>:</td>
-                                                    <td id="koordinat">
-                                                        <small>
-                                                            <i class="fas fa-database"></i>
-                                                        </small>
-                                                    </td>
+                                                    <td id="koordinat"></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Wilayah</th>
                                                     <td>:</td>
-                                                    <td>
-                                                        <ul>
-                                                            <li id="wilayah1">
-                                                                <small>
-                                                                    <i class="fas fa-database"></i>
-                                                                </small>
-                                                            </li>
-                                                            <li id="wilayah2">
-                                                                <small>
-                                                                    <i class="fas fa-database"></i>
-                                                                </small>
-                                                            </li>
-                                                            <li id="wilayah3">
-                                                                <small>
-                                                                    <i class="fas fa-database"></i>
-                                                                </small>
-                                                            </li>
-                                                            <li id="wilayah4">
-                                                                <small>
-                                                                    <i class="fas fa-database"></i>
-                                                                </small>
-                                                            </li>
-                                                            <li id="wilayah5">
-                                                                <small>
-                                                                    <i class="fas fa-database"></i>
-                                                                </small>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
+                                                    <td id="wilayah"></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Potensi</th>
                                                     <td>:</td>
-                                                    <td id="potensi">
-                                                        <small>
-                                                            <i class="fas fa-database"></i>
-                                                        </small>
+                                                    <td id="potensi"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Peta Guncangan</th>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <img class="img-responsive" id="shakemap"
+                                                            src="https://hanifmu.com/images/bg-hanifmu.com.webp"
+                                                            alt="Photo">
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -522,14 +476,10 @@
                 $('#tanggal').text(geojson.responseJSON.features[0].properties.tanggal + ' ' + geojson.responseJSON.features[0].properties.jam);
                 $('#magnitude').text(geojson.responseJSON.features[0].properties.magnitude);
                 $('#kedalaman').text(geojson.responseJSON.features[0].properties.kedalaman);
-                $('#koordinat').text(geojson.responseJSON.features[0].properties.bujur + ' ' + geojson.responseJSON.features[0].properties.lintang);
+                $('#koordinat').text(geojson.responseJSON.features[0].properties.lintang + ' ' + geojson.responseJSON.features[0].properties.bujur);
                 $('#potensi').text(geojson.responseJSON.features[0].properties.potensi);
-                $('#wilayah1').text(geojson.responseJSON.features[0].properties.wilayah1);
-                $('#wilayah2').text(geojson.responseJSON.features[0].properties.wilayah2);
-                $('#wilayah3').text(geojson.responseJSON.features[0].properties.wilayah3);
-                $('#wilayah4').text(geojson.responseJSON.features[0].properties.wilayah4);
-                $('#wilayah5').text(geojson.responseJSON.features[0].properties.wilayah5);
-                $("#eqmap").attr('src', geojson.responseJSON.features[0].properties.peta);
+                $('#wilayah').text(geojson.responseJSON.features[0].properties.wilayah);
+                $('#shakemap').attr('src', geojson.responseJSON.features[0].properties.shakemap);
 
                 // update setView
                 mymap.setView([geojson.responseJSON.features[0].geometry.coordinates[1], geojson.responseJSON.features[0].geometry.coordinates[0]], 6);

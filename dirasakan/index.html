@@ -4,33 +4,33 @@
 <html>
 
 <head>
-    <title>Data 30 Gempa Bumi Dirasakan | LINDU</title>
+    <title>Data 15 Gempa Bumi Dirasakan | LINDU</title>
 
     <!-- meta #start -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="author" content="hanifmu.com" />
-    <meta name="title" content="Data 30 Gempa Bumi Dirasakan | LINDU" />
+    <meta name="title" content="Data 15 Gempa Bumi Dirasakan | LINDU" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta name="description" content="Data 15 gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
     <!-- meta #end -->
 
     <!-- meta twitter #start -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://lindu.hanifmu.com/dirasakan" />
-    <meta property="twitter:title" content="Data 30 Gempa Bumi Dirasakan | LINDU" />
-    <meta property="twitter:description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta property="twitter:title" content="Data 15 Gempa Bumi Dirasakan | LINDU" />
+    <meta property="twitter:description" content="Data 15 gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
     <meta property="twitter:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <!-- meta twitter #end -->
 
     <!-- meta facebook #start -->
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Data 30 Gempa Bumi Dirasakan" />
+    <meta property="og:title" content="Data 15 Gempa Bumi Dirasakan" />
     <meta property="og:site_name" content="lindu.hanifmu.com" />
     <meta property="og:url" content="https://lindu.hanifmu.com/dirasakan | LINDU" />
-    <meta property="og:description" content="Data gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
+    <meta property="og:description" content="Data 15 gempa bumi dirasakan yang terjadi di wilayah Indonesia." />
     <meta property="og:image" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <meta property="og:image:secure_url" content="https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png" />
     <!-- meta facebook #end -->
@@ -105,7 +105,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "Event",
-            "name": "Data 30 Gempa Bumi Dirasakan",
+            "name": "Data 15 Gempa Bumi Dirasakan",
             "location": {
                 "@type": "Place",
                 "address": {
@@ -114,7 +114,7 @@
                 }
             },
             "startDate": "2019-01-01T00:00:00.000Z",
-            "description": "Data 30 gempa bumi dirasakan yang terjadi di wilayah Indonesia.",
+            "description": "Data 15 gempa bumi dirasakan yang terjadi di wilayah Indonesia.",
             "image": "https://lindu.hanifmu.com/assets/earthquake-3167693_1920.png",
             "performer": {
                 "@type": "Person",
@@ -189,15 +189,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="../tsunami-terkini" class="nav-link">
-                                <i class="nav-icon fas fa-swimmer"></i>
-                                <p>
-                                    Gempa & Tsunami Terkini
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="../magnitudo-5" class="nav-link">
                                 <i class="nav-icon fas fa-file-contract"></i>
                                 <p>
@@ -267,7 +258,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Data 30 Gempa Bumi Dirasakan</h1>
+                            <h1>Data 15 Gempa Bumi Dirasakan</h1>
                         </div>
 
                     </div>
@@ -295,7 +286,6 @@
                                                     <th>Magnitude</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
-                                                    <th>Keterangan</th>
                                                     <th>Dirasakan</th>
                                                 </tr>
                                             </thead>
@@ -308,7 +298,6 @@
                                                     <th>Magnitude</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
-                                                    <th>Keterangan</th>
                                                     <th>Dirasakan</th>
                                                 </tr>
                                             </tfoot>
@@ -366,6 +355,8 @@
                 console.log("Galat, bos!");
             },
         });
+
+        console.log(geojson);
 
         var mbAttr =
             'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -528,7 +519,11 @@
                     "sClass": "text-center"
                 }, {
                     "data": "properties.tanggal",
-                    "sClass": "text-center"
+                    "sClass": "text-center",
+                    "render": function (data, type, row) {
+                        return data +
+                            ' ' + row.properties.jam;
+                    }
                 },
                 {
                     "data": "properties.magnitude",
@@ -539,12 +534,12 @@
                     "sClass": "text-center"
                 },
                 {
-                    "data": "properties.posisi",
-                    "sClass": "text-center"
-                },
-                {
-                    "data": "properties.keterangan",
-                    "sClass": "text-center"
+                    "data": "",
+                    "sClass": "text-center",
+                    "render": function (data, type, row) {
+                        return row.properties.lintang +
+                            ' ' + row.properties.bujur;
+                    }
                 },
                 {
                     "data": "properties.dirasakan",
