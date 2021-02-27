@@ -5,10 +5,10 @@
         <description>Informasi gempa bumi yang terjadi di wilayah Indonesia.</description> 
        <atom:link href="https://lindu.hanifmu.com/index.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title>Gempa Bumi Magnitudo 5.0+ Terkini</title>
+            <title>Gempa Bumi Terkini</title>
             <link>https://lindu.hanifmu.com/terkini/</link>
             <guid>https://lindu.hanifmu.com/terkini/</guid>
-            <description><p>Informasi gempa bumi magnitudo 5.0+ terkini yang terjadi di wilayah Indonesia.</p></description>
+            <description><p>Informasi gempa bumi terkini yang terjadi di wilayah Indonesia.</p></description>
         </item>
         <item>
             <title>Data 15 Gempa Bumi Magnitudo 5.0+</title>
